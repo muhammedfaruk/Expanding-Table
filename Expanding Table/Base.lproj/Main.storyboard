@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Expanding_Table" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nsk-Gc-1ZG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="100" id="frh-Us-7YW" customClass="ImageTableViewCell" customModule="Expanding_Table" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="frh-Us-7YW" id="PAA-z0-2wq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageName" translatesAutoresizingMaskIntoConstraints="NO" id="TvX-bV-6Au">
+                                                    <rect key="frame" x="16" y="6" width="382" height="88"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="78a-jm-6TT"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TvX-bV-6Au" firstAttribute="leading" secondItem="PAA-z0-2wq" secondAttribute="leading" constant="16" id="DY1-7j-W3s"/>
+                                                <constraint firstItem="TvX-bV-6Au" firstAttribute="centerY" secondItem="PAA-z0-2wq" secondAttribute="centerY" id="P0H-R3-b88"/>
+                                                <constraint firstItem="TvX-bV-6Au" firstAttribute="top" secondItem="PAA-z0-2wq" secondAttribute="top" constant="6" id="WQe-RQ-QJ9"/>
+                                                <constraint firstItem="TvX-bV-6Au" firstAttribute="centerX" secondItem="PAA-z0-2wq" secondAttribute="centerX" id="ZUl-37-hRB"/>
+                                                <constraint firstAttribute="trailing" secondItem="TvX-bV-6Au" secondAttribute="trailing" constant="16" id="b1I-iE-nAA"/>
+                                                <constraint firstAttribute="bottom" secondItem="TvX-bV-6Au" secondAttribute="bottom" constant="6" id="mcb-Sq-A4m"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="istanbulImage" destination="TvX-bV-6Au" id="z2a-Bv-e4a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="z5f-EF-lJc" customClass="MessageTableViewCell" customModule="Expanding_Table" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="150" width="414" height="42.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z5f-EF-lJc" id="jLc-5u-jgn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naQ-Hu-VyY">
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="374" height="20.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="naQ-Hu-VyY" secondAttribute="trailing" id="5Wf-av-Qhi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="naQ-Hu-VyY" secondAttribute="bottom" id="Bok-oU-zZy"/>
+                                                <constraint firstItem="naQ-Hu-VyY" firstAttribute="leading" secondItem="jLc-5u-jgn" secondAttribute="leadingMargin" id="DSb-7j-tZX"/>
+                                                <constraint firstItem="naQ-Hu-VyY" firstAttribute="top" secondItem="jLc-5u-jgn" secondAttribute="topMargin" id="zcK-ME-PsY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="naQ-Hu-VyY" id="6oj-ud-m9g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ColorCell" id="Ve5-Zs-2n8" customClass="ColorTableViewCell" customModule="Expanding_Table" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="192.66666793823242" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ve5-Zs-2n8" id="hmy-cd-tFl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nsk-Gc-1ZG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="En4-4U-Fer"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nsk-Gc-1ZG" secondAttribute="trailing" id="TOK-3t-ePj"/>
+                            <constraint firstItem="nsk-Gc-1ZG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UPf-bB-Ws1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nsk-Gc-1ZG" secondAttribute="bottom" id="rLc-ld-D14"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="nsk-Gc-1ZG" id="Q8I-OK-frg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-5" y="-27"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imageName" width="1600" height="900"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
